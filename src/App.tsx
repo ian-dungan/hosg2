@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { GameProvider } from './contexts/GameContext';
 import { Toaster } from '@/components/ui/toaster';
 import routes from './routes';
