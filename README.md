@@ -94,3 +94,7 @@ Configure environment variables and install relevant dependencies.If you need to
 ## Learn More
 
 You can also check the help documentation: Download and Building the app（ [https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en](https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en)）to learn more detailed content.
+
+## Deployment
+
+See [docs/deployment.md](docs/deployment.md) for GitHub Pages + Supabase setup instructions and an optional Render static hosting flow. The repository now includes a GitHub Actions workflow that builds the Vite site with the required Supabase environment variables and publishes the bundle to Pages. If you encounter MIME-type errors like `main.tsx` loading as `application/octet-stream`, follow the checklist in [docs/troubleshooting.md](docs/troubleshooting.md) to ensure you are serving the built `dist/` output rather than the raw repository.
