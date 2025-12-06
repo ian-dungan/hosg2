@@ -22,6 +22,9 @@ The repository now contains `.github/workflows/deploy.yml`, which builds the sit
    - Deploy the artifact with `actions/deploy-pages`.
 4. Your site will be available at the Pages URL shown after the deploy step. Because the router now uses a hash history, direct refreshes will work without extra rewrites.
 
+### If you still see `main.tsx` MIME errors on Pages
+That error means Pages is serving the raw repository (so `/src/main.tsx` is shipped as TypeScript) instead of the built `dist/` artifact. Double-check that **Pages → Source** is set to **GitHub Actions** and that the latest workflow run succeeded. If you prefer manual hosting (e.g., without Actions), run `pnpm run build` locally and upload the contents of `dist/` to your hosting provider; do **not** point the host directly at the repository root.
+
 ## 3) Optional: mirror the static build on Render
 If you prefer Render for hosting (e.g., as a fallback or to test before promoting to Pages):
 
